@@ -121,20 +121,9 @@ begin
   writeln('2. 16x16');
   writeln('3. 16x30');
   readln(tamanoTablero);
-
-  case tamanoTablero of
-    1: begin
-         InicializarTablero(TableroBuscaminas, tamano_pequeno);
-         ImprimirTablero(TableroBuscaminas, tamano_pequeno);
-       end;
-    2: begin
-         InicializarTablero(TableroBuscaminas, tamano_mediano);
-         ImprimirTablero(TableroBuscaminas, tamano_mediano);
-       end;
-    3: begin
-         InicializarTablero(TableroBuscaminas, tamano_grande);
-         SetLength(TableroBuscaminas, tamano_grande, ancho_grande);
-         ImprimirTablero(TableroBuscaminas, tamano_grande);
-       end;
+  case opcion of
+    1: JugarBuscaminas(tableroFacil, filas_facil, columnas_facil, minas_facil);
+    2: JugarBuscaminas(tableroMedia, filas_media, columnas_media, minas_media);
+    3: JugarBuscaminas(tableroDificil, filas_dificil, columnas_dificil, minas_dificil);
   end;
 end.
