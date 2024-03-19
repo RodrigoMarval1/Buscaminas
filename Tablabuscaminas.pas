@@ -115,11 +115,14 @@ end;
 
 var
   opcion: integer;
+  
 begin
-  writeln('Elige el tamano del tablero de Buscaminas:');
-  writeln('1. 8x8');
-  writeln('2. 16x16');
-  writeln('3. 16x30');
+  writeln('Bienvenido al juego de Buscaminas');
+  writeln('Seleccione la dificultad:');
+  writeln('1. Facil (8x8)');
+  writeln('2. Medio (16x16)');
+  writeln('3. Dificil (16x30)');
+  writeln('Ingrese el numero correspondiente a la dificultad:');
   readln(opcion);
   case opcion of
     1: JugarBuscaminas(tableroFacil, filas_facil, columnas_facil, minas_facil);
@@ -127,3 +130,4 @@ begin
     3: JugarBuscaminas(tableroDificil, filas_dificil, columnas_dificil, minas_dificil);
   end;
 end.
+
