@@ -120,7 +120,7 @@ begin
   writeln('1. 8x8');
   writeln('2. 16x16');
   writeln('3. 16x30');
-  readln(tamanoTablero);
+  readln(opcion);
   case opcion of
     1: JugarBuscaminas(tableroFacil, filas_facil, columnas_facil, minas_facil);
     2: JugarBuscaminas(tableroMedia, filas_media, columnas_media, minas_media);
