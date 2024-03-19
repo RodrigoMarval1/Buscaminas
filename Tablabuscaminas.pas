@@ -1,26 +1,30 @@
 program Buscaminas;
 
 const
-  tamano_pequeno = 8;
-  tamano_mediano = 16;
-  tamano_grande = 16;
-  ancho_grande = 30;
+  filas_facil = 8;
+  columnas_facil = 8;
+  minas_facil = 10;
+  filas_media = 16;
+  columnas_media = 16;
+  minas_media = 40;
+  filas_dificil = 16;
+  columnas_dificil = 30;
+  minas_dificil = 99;
 
 type
-  Tablero = array of array of Char;
-  coordenada = record
+  Tablero = array[1..30, 1..30] of char;
+  Coordenada = record
     x: integer;
     y: integer;
-end;
+  end;
 
 var
-  Tablerofacil, tableromedia, talberodificil: tablero;
-  
-procedure InicializarTablero(var Tablero: Tablero; filas, columnas, minas: Integer);
+  tableroFacil, tableroMedia, tableroDificil: Tablero;
+
+procedure InicializarTablero(var tablero: Tablero; filas, columnas, minas: integer);
 var
-  a, b: minascolocadas: interger;
+  a, b, minasColocadas: integer;
 begin
-  begin
   randomize;
   for a := 1 to filas do
     for b := 1 to columnas do
